@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './SignIn.scss'
+import './SignIn.styles.scss'
 
 class SignIn extends React.Component {
   constructor(props) {
