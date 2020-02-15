@@ -17,6 +17,10 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+    auth.onAuthChanged()
+  }
+
   render() {
     return (
       <div>
