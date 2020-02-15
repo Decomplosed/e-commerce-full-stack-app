@@ -18,7 +18,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    auth.onAuthChanged()
+    auth.onAuthChanged(user => {
+      this.setState({ currentUser: user })
+    })
   }
 
   render() {
