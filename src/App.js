@@ -11,13 +11,7 @@ import { setCurrentUser } from './redux/user/user.actions'
 import './App.css'
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      currentUser: null
-    }
-  }
+  unsubscribeFromAuth = null
 
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
