@@ -4,7 +4,7 @@ import ShopPage from './pages/shop/ShopPage'
 import SignInAndSignUp from './pages/sign-in-and-sing-up/SignInAndSignUp'
 import Header from './components/Header/Header'
 import { Switch, Route } from 'react-router-dom'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 
 import './App.css'
@@ -54,4 +54,4 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default connect()(App)
