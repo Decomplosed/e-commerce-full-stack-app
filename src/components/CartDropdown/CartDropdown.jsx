@@ -1,5 +1,6 @@
 import React from 'react'
 import CustomButton from '../CustomButton/CustomButton'
+import CartItem from '../CartItem/CartItem'
 
 import './CartDropdown.styles.scss'
 
