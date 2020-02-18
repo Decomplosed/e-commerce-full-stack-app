@@ -1,4 +1,5 @@
 import React from 'react'
+import CartIcon from '../CartIcon/CartIcon'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { auth } from '../../firebase/firebase.utils'
@@ -27,6 +28,7 @@ const Header = ({ currentUser }) => (
           SIGN IN
         </Link>
       )}
+      <CartIcon />
     </div>
   </div>
 )
