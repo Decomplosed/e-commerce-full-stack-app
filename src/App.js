@@ -1,6 +1,7 @@
 import React from 'react'
 import Homepage from './pages/homepage/Homepage'
 import ShopPage from './pages/shop/ShopPage'
+import CheckoutPage from './pages/checkout/Checkout'
 import SignInAndSignUp from './pages/sign-in-and-sing-up/SignInAndSignUp'
 import Header from './components/Header/Header'
 import { Switch, Route, Redirect } from 'react-router-dom'
@@ -45,6 +46,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={Homepage} />
           <Route path='/shop' component={ShopPage} />
+          <Route exact path='/checkout' component={CheckoutPage} />
           <Route
             path='/signin'
             render={() =>
