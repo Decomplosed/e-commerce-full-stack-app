@@ -5,17 +5,20 @@ import { clearItemFromCart } from '../../redux/cart/cart.actions'
 
 import './CheckoutItem.styles.scss'
 
-const CheckoutItem = ({ cartItem: { name, imageUrl, price, quantity } }) => (
-  <div className='checkout-item'>
-    <div className='image-container'>
-      <img src={imageUrl} alt={`item ${name}`} />
+const CheckoutItem = ({ cartItem }) => {
+  const { name, imageUrl, price, quantity } = cartItem
+  return (
+    <div className='checkout-item'>
+      <div className='image-container'>
+        <img src={imageUrl} alt={`item ${name}`} />
+      </div>
+      <div className='name'>{name}</div>
+      <div className='quantity'>{quantity}</div>
+      <div className='price'>{price}</div>
+      <div className='remove-button'>&#10005;</div>
     </div>
-    <div className='name'>{name}</div>
-    <div className='quantity'>{quantity}</div>
-    <div className='price'>{price}</div>
-    <div className='remove-button'>&#10005;</div>
-  </div>
-)
+  )
+}
 
 const mapDispatchToProps = dispatch => ({
   clearItem: item => dispatch(clearItemFromCart(item))
