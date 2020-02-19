@@ -2,14 +2,14 @@ import React from 'react'
 
 import './CheckoutItem.styles.scss'
 
-const CheckoutItem = () => (
+const CheckoutItem = ({ cartItem: { name, imageUrl, price, quantity } }) => (
   <div className='checkout-item'>
     <div className='image-container'>
-      <img alt='item' />
+      <img src={imageUrl} alt={`item ${name}`} />
     </div>
-    <div className='name'></div>
-    <div className='quantity'></div>
-    <div className='price'></div>
+    <div className='name'>{name}</div>
+    <div className='quantity'>{quantity}</div>
+    <div className='price'>{price}</div>
     <div className='remove-button'>&#10005;</div>
   </div>
 )
