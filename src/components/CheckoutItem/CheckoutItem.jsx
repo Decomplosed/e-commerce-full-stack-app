@@ -18,7 +18,14 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
       </div>
       <div className='name'>{name}</div>
       <div className='quantity'>
-        <div className='arrow' onClick={() => removeItem(cartItem)}>
+        <div
+          className={`arrow ${quantity === 1 ? 'disabled' : ''}`}
+          onClick={() => {
+            if (quantity !== 1) {
+              removeItem(cartItem)
+            }
+          }}
+        >
           &#10094;
         </div>
         <span className='value'>{quantity}</span>
