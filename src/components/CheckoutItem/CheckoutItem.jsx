@@ -15,7 +15,9 @@ const CheckoutItem = ({ cartItem, clearItem }) => {
       <div className='name'>{name}</div>
       <div className='quantity'>{quantity}</div>
       <div className='price'>{price}</div>
-      <div className='remove-button'>&#10005;</div>
+      <div className='remove-button' onClick={() => clearItem(cartItem)}>
+        &#10005;
+      </div>
     </div>
   )
 }
