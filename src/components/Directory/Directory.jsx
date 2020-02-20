@@ -1,6 +1,8 @@
 import React from 'react'
 import MenuItem from '../MenuItem/MenuItem'
 
+import { connect } from 'react-redux'
+
 import './Directory.styles.scss'
 
 class Directory extends React.Component {
