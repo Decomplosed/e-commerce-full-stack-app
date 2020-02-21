@@ -1,4 +1,5 @@
 import React from 'react'
+import CollectionPreview from '../CollectionPreview/CollectionPreview'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
