@@ -1,5 +1,6 @@
 import React from 'react'
 import CollectionPreview from '../../components/CollectionPreview/CollectionPreview'
+import { connect } from 'redux'
 
 const ShopPage = ({ collections }) => (
   <div className='shop-page'>
