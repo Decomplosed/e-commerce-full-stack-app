@@ -3,9 +3,7 @@ import CollectionsOverview from '../../components/CollectionsOverview/Collection
 
 const ShopPage = ({ collections }) => (
   <div className='shop-page'>
-    {collections.map(({ id, ...collectionProps }) => (
-      <CollectionPreview key={id} {...collectionProps} />
-    ))}
+    <CollectionsOverview />
   </div>
 )
 
