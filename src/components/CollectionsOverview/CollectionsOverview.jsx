@@ -1,5 +1,6 @@
 import React from 'react'
 import CollectionPreview from '../CollectionPreview/CollectionPreview'
+import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { selectCollections } from '../../redux/shop/shop.selectors'
