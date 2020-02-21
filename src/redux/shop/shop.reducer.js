@@ -1,5 +1,4 @@
 import SHOP_DATA from './shop.data'
-import { bindActionCreators } from 'redux'
 
 const INITIAL_STATE = {
   colelctions: SHOP_DATA
