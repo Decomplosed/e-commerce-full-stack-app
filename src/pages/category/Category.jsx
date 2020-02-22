@@ -9,3 +9,5 @@ const CategoryPage = () => (
     <h2>CATEGORY PAGE</h2>
   </div>
 )
+
+export default CategoryPage
