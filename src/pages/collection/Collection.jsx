@@ -6,13 +6,9 @@ import { selectCollection } from '../../redux/shop/shop.selectors'
 
 import './Collection.styles.scss'
 
-const CollectionPage = ({ match }) => {
-  console.log(match.params.collectionId)
-  return (
-    <div className='collection-page'>
-      <h2>CATEGORY PAGE</h2>
-    </div>
-  )
+const CollectionPage = ({ collection }) => {
+  const { title, items } = collection
+  return <div className='collection-page'>{}</div>
 }
 
 const mapStateToProps = (state, ownProps) => ({
