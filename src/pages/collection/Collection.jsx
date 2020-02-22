@@ -5,9 +5,9 @@ import CollectionItem from '../../components/CollectionItem/CollectionItem'
 import './Collection.styles.scss'
 
 const CollectionPage = ({ match }) => {
-  console.log(match.params.categoryId)
+  console.log(match.params.collectionId)
   return (
-    <div className='category'>
+    <div className='collection-page'>
       <h2>CATEGORY PAGE</h2>
     </div>
   )
