@@ -1,6 +1,7 @@
 import React from 'react'
-
 import CollectionItem from '../../components/CollectionItem/CollectionItem'
+
+import { connect } from 'react-redux'
 
 import './Collection.styles.scss'
 
