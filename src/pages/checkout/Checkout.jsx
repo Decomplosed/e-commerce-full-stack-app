@@ -1,5 +1,6 @@
 import React from 'react'
 import CheckoutItem from '../../components/CheckoutItem/CheckoutItem'
+import StripeCheckoutButton from '../../components/StripeButton/StripeButton'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
