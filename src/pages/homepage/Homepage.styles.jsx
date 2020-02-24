@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HomePageCotnainer = styled.div`
+export const HomePageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
