@@ -26,3 +26,7 @@ export const OptionsContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
 `
+
+export const OptionLink = styled(Link)`
+  ${OptionContainerStyles}
+`
