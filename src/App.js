@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import Homepage from './pages/homepage/Homepage'
 import ShopPage from './pages/shop/ShopPage'
 import CheckoutPage from './pages/checkout/Checkout'
