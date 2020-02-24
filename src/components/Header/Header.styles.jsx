@@ -14,3 +14,10 @@ export const LogoContainer = styled(Link)`
   width: 70px;
   padding: 25px;
 `
+export const OptionsContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`
