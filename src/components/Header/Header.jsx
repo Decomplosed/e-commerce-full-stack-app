@@ -10,7 +10,13 @@ import { selectCartHidden } from '../../redux/cart/cart.selectors'
 import { selectCurrentUser } from '../../redux/user/user.selectors'
 
 import { ReactComponent as Logo } from '../../assets/crown.svg'
-import './Header.styles.scss'
+import {
+  HeaderContainer,
+  LogoContainer,
+  OptionsContainer,
+  OptionDiv,
+  OptionLink
+} from './Header.styles'
 
 const Header = ({ currentUser, hidden }) => (
   <div className='header'>
