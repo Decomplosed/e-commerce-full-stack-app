@@ -12,6 +12,16 @@ const invertedButtonStyles = css`
   }
 `
 
+const googleSignInStyles = css`
+  background-color: #4285f3;
+  color: white;
+
+  &:hover {
+    background-color: #357ae8;
+    border: none;
+  }
+`
+
 export const CustomButtonContainer = styled.button`
   min-width: 165px;
   width: auto;
