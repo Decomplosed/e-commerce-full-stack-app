@@ -3,7 +3,10 @@ import CollectionsOverview from '../../components/CollectionsOverview/Collection
 import CollectionPage from '../collection/Collection'
 import { Route } from 'react-router-dom'
 
-import { firestore } from '../../firebase/firebase.utils'
+import {
+  firestore,
+  convertCollectionsSnapshotToMap
+} from '../../firebase/firebase.utils'
 
 class ShopPage extends React.Component {
   unsubscribeFromSnapshot = null
