@@ -9,6 +9,8 @@ import {
   convertCollectionsSnapshotToMap
 } from '../../firebase/firebase.utils'
 
+import { updateCollections } from '../../redux/shop/shop.actions'
+
 class ShopPage extends React.Component {
   unsubscribeFromSnapshot = null
 
