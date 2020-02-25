@@ -37,4 +37,8 @@ class ShopPage extends React.Component {
   }
 }
 
+const mapDispatchToProps = dispatch => ({
+  updateCollections: collectionsMap => dispatch(updateCollections)
+})
+
 export default ShopPage
