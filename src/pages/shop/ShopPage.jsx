@@ -20,7 +20,7 @@ class ShopPage extends React.Component {
 
     collectionRef.onSnapshot(async snapshot => {
       const collectionsMap = convertCollectionsSnapshotToMap(snapshot)
-      console.log(collectionsMap)
+      updateCollections(collectionsMap)
     })
   }
 
