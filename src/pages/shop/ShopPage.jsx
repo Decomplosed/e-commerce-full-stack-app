@@ -4,6 +4,8 @@ import CollectionPage from '../collection/Collection'
 import { Route } from 'react-router-dom'
 
 class ShopPage extends React.Component {
+  unsubscribeFromSnapshot = null
+  
   render() {
     const { match } = this.props
     return (
