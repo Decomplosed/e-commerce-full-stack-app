@@ -3,9 +3,13 @@ import CollectionsOverview from '../../components/CollectionsOverview/Collection
 import CollectionPage from '../collection/Collection'
 import { Route } from 'react-router-dom'
 
+import { firestore } from '../../firebase/firebase.utils'
+
 class ShopPage extends React.Component {
   unsubscribeFromSnapshot = null
-  
+
+  componentDidMount() {}
+
   render() {
     const { match } = this.props
     return (
