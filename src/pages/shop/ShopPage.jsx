@@ -12,7 +12,14 @@ import {
 
 import { updateCollections } from '../../redux/shop/shop.actions'
 
+const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview)
+const CollectionPageWithSpinner = WithSpinner(CollectionPage)
+
 class ShopPage extends React.Component {
+  state = {
+    loading: true
+  }
+
   unsubscribeFromSnapshot = null
 
   componentDidMount() {
@@ -22,6 +29,7 @@ class ShopPage extends React.Component {
     collectionRef.onSnapshot(async snapshot => {
       const collectionsMap = convertCollectionsSnapshotToMap(snapshot)
       updateCollections(collectionsMap)
+      this.setState({ loading: false })
     })
   }
 
