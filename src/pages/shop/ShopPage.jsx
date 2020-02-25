@@ -1,6 +1,7 @@
 import React from 'react'
 import CollectionsOverview from '../../components/CollectionsOverview/CollectionsOverview'
 import CollectionPage from '../collection/Collection'
+import WithSpinner from '../../components/WithSpinner'
 import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
