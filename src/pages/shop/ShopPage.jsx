@@ -5,11 +5,6 @@ import WithSpinner from '../../components/WithSpinner/WithSpinner'
 import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import {
-  firestore,
-  convertCollectionsSnapshotToMap
-} from '../../firebase/firebase.utils'
-
 import { updateCollections } from '../../redux/shop/shop.actions'
 
 const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview)
