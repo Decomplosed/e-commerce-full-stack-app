@@ -5,16 +5,13 @@ import WithSpinner from '../../components/WithSpinner/WithSpinner'
 import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import { updateCollections } from '../../redux/shop/shop.actions'
+import { fetchCollectionsStartAsync } from '../../redux/shop/shop.actions'
 
 const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview)
 const CollectionPageWithSpinner = WithSpinner(CollectionPage)
 
 class ShopPage extends React.Component {
-
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
 
   render() {
     const { match } = this.props
