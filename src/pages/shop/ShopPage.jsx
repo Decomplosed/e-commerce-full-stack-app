@@ -38,9 +38,10 @@ class ShopPage extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  updateCollections: collectionsMap =>
-    dispatch(updateCollections(collectionsMap))
+const mapStateToProps = createStructuredSelector({
+  isCollectionFetching: selectIsCollectionFetching
 })
+
+const mapDispatchToProps = dispatch => ({})
 
 export default connect(null, mapDispatchToProps)(ShopPage)
