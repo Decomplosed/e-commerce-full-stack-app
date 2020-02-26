@@ -42,6 +42,8 @@ const mapStateToProps = createStructuredSelector({
   isCollectionFetching: selectIsCollectionFetching
 })
 
-const mapDispatchToProps = dispatch => ({})
+const mapDispatchToProps = dispatch => ({
+  fetchCollectionsStartAsync: () => dispatch(fetchCollectionsStartAsync())
+})
 
 export default connect(null, mapDispatchToProps)(ShopPage)
