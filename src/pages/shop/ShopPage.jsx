@@ -3,6 +3,7 @@ import CollectionsOverview from '../../components/CollectionsOverview/Collection
 import CollectionPage from '../collection/Collection'
 import WithSpinner from '../../components/WithSpinner/WithSpinner'
 import { Route } from 'react-router-dom'
+import { createStructuredSelector } from 'reselect'
 import { connect } from 'react-redux'
 
 import { fetchCollectionsStartAsync } from '../../redux/shop/shop.actions'
