@@ -7,7 +7,10 @@ import { createStructuredSelector } from 'reselect'
 import { connect } from 'react-redux'
 
 import { fetchCollectionsStartAsync } from '../../redux/shop/shop.actions'
-import { selectIsCollectionFetching } from '../../redux/shop/shop.selectors'
+import {
+  selectIsCollectionFetching,
+  selectIsColletionLoaded
+} from '../../redux/shop/shop.selectors'
 
 const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview)
 const CollectionPageWithSpinner = WithSpinner(CollectionPage)
