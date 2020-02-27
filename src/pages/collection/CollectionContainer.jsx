@@ -14,3 +14,5 @@ const CollectionPageContainer = compose(
   connect(mapStateToProps),
   WithSpinner
 )(CollectionPage)
+
+export default CollectionPageContainer
