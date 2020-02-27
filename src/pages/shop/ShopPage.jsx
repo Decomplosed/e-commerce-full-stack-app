@@ -12,7 +12,6 @@ import {
   selectIsColletionLoaded
 } from '../../redux/shop/shop.selectors'
 
-const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview)
 const CollectionPageWithSpinner = WithSpinner(CollectionPage)
 
 class ShopPage extends React.Component {
