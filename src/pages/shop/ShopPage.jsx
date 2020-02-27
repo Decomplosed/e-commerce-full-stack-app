@@ -1,6 +1,6 @@
 import React from 'react'
 import CollectionsOverviewContainer from '../../components/CollectionsOverview/CollectionsOverviewContainer'
-import CollectionPage from '../collection/Collection'
+import CollectionPageContainer from '../collection/CollectionContainer'
 import WithSpinner from '../../components/WithSpinner/WithSpinner'
 import { Route } from 'react-router-dom'
 import { createStructuredSelector } from 'reselect'
