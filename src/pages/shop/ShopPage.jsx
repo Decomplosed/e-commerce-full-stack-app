@@ -1,7 +1,6 @@
 import React from 'react'
 import CollectionsOverviewContainer from '../../components/CollectionsOverview/CollectionsOverviewContainer'
 import CollectionPageContainer from '../collection/CollectionContainer'
-import WithSpinner from '../../components/WithSpinner/WithSpinner'
 import { Route } from 'react-router-dom'
 import { createStructuredSelector } from 'reselect'
 import { connect } from 'react-redux'
