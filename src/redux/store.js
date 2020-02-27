@@ -5,6 +5,8 @@ import createSagaMiddleware from 'redux-saga'
 
 import rootReducer from './root.reducer'
 
+const sagaMiddleware = createSagaMiddleware()
+
 const middlewares = []
 
 if (process.env.NODE_ENV === 'development') {
