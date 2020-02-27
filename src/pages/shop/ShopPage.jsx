@@ -1,5 +1,5 @@
 import React from 'react'
-import CollectionsOverview from '../../components/CollectionsOverview/CollectionsOverview'
+import CollectionsOverviewContainer from '../../components/CollectionsOverview/CollectionsOverviewContainer'
 import CollectionPage from '../collection/Collection'
 import WithSpinner from '../../components/WithSpinner/WithSpinner'
 import { Route } from 'react-router-dom'
