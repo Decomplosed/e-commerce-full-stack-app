@@ -9,3 +9,8 @@ import CollectionPage from './Collection'
 const mapStateToProps = createStructuredSelector({
   isLoading: state => selectIsColletionLoaded(state)
 })
+
+const CollectionPageContainer = compose(
+  connect(mapStateToProps),
+  WithSpinner
+)(CollectionPage)
