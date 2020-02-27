@@ -8,8 +8,6 @@ import { connect } from 'react-redux'
 
 import { fetchCollectionsStartAsync } from '../../redux/shop/shop.actions'
 
-const CollectionPageWithSpinner = WithSpinner(CollectionPage)
-
 class ShopPage extends React.Component {
   componentDidMount() {
     const { fetchCollectionsStartAsync } = this.props
