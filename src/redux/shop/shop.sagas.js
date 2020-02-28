@@ -15,9 +15,14 @@ import ShopActionTypes from './shop.types'
 export function* fetchCollectionsAsync() {
   yield console.log('Fired')
 
-  const collectionRef = firestore.collection('collections')
-  const snapshot = yield collectionRef.get()
-  const collectionsMap = yield call(convertCollectionsSnapshotToMap, snapshot)
+  try {
+    const collectionRef = firestore.collection('collections')
+    const snapshot = yield collectionRef.get()
+    const collectionsMap = yield call(convertCollectionsSnapshotToMap, snapshot)
+  } catch(err) {
+    
+  }
+
 
   // collectionRef
   //   .get()
