@@ -16,14 +16,16 @@ export function* fetchCollectionsAsync() {
   yield console.log('Fired')
 
   const collectionRef = firestore.collection('collections')
+  const snapshot = yield collectionRef.get()
+  const collectionsMap = yield call(convertCollectionsSnapshotToMap, snapshot)
 
-  collectionRef
-    .get()
-    .then(snapshot => {
-      const collectionsMap = convertCollectionsSnapshotToMap(snapshot)
-      dispatch(fetchCollectionsSuccess(collectionsMap))
-    })
-    .catch(error => dispatch(fetchCollectionsFailure(error.message)))
+  // collectionRef
+  //   .get()
+  //   .then(snapshot => {
+  //     const collectionsMap = convertCollectionsSnapshotToMap(snapshot)
+  //     dispatch(fetchCollectionsSuccess(collectionsMap))
+  //   })
+  //   .catch(error => dispatch(fetchCollectionsFailure(error.message)))
 }
 
 export function* fetchCollectionsStart() {
