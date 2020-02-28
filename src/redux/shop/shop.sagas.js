@@ -5,6 +5,11 @@ import {
   convertCollectionsSnapshotToMap
 } from '../../firebase/firebase.utils'
 
+import {
+  fetchCollectionsSuccess,
+  fetchCollectionsFailure
+} from './shop.actions'
+
 import ShopActionTypes from './shop.types'
 
 export function* fetchCollectionsAsync() {
