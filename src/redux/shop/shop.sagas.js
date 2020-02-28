@@ -1,5 +1,10 @@
 import { takeEvery } from 'redux-saga/effects'
 
+import {
+  firestore,
+  convertCollectionsSnapshotToMap
+} from '../../firebase/firebase.utils'
+
 import ShopActionTypes from './shop.types'
 
 export function* fetchCollectionsAsync() {
