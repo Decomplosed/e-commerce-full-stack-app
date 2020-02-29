@@ -2,4 +2,16 @@ import { takeLatest, put } from 'redux-saga/effects'
 
 import UserActionTypes from './user.actions'
 
-export function* onGoogleSignInStart() {}
+import {
+  auth,
+  googleProvider,
+  createUserProfileDocument
+} from '../../firebase/firebase.utils'
+
+export function* signInWithGoogle() {
+  
+}
+
+export function* onGoogleSignInStart() {
+  yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START)
+}
