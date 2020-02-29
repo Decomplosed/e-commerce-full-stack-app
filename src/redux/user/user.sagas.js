@@ -9,9 +9,16 @@ import {
 } from '../../firebase/firebase.utils'
 
 export function* signInWithGoogle() {
-  
+  try {
+    const userRef = yield auth.signInWithPopup(googleProvider)
+    console.log(userRef)
+  } catch (err) {}
 }
 
 export function* onGoogleSignInStart() {
   yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START)
+}
+
+export function* userSagas() {
+  yield all([call(onGoogleSignInStart)])
 }
