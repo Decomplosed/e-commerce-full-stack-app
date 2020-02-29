@@ -22,7 +22,7 @@ class SignIn extends React.Component {
 
   handleSubmit = async e => {
     e.preventDefault()
-
+    const { emailSignInStart } = this.props
     const { email, password } = this.state
   }
 
@@ -74,7 +74,8 @@ class SignIn extends React.Component {
 
 const mapDispatchToProps = dispatch => ({
   googleSignInStart: () => dispatch(googleSignInStart()),
-  emailSignInStart: (email, password) => dispatch(emailSignInStart({email, password}))
+  emailSignInStart: (email, password) =>
+    dispatch(emailSignInStart({ email, password }))
 })
 
 export default connect(null, mapDispatchToProps)(SignIn)
