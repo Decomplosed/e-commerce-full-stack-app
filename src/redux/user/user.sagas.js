@@ -18,7 +18,9 @@ export function* signInWithGoogle() {
     yield put(
       googleSignInSuccess({ id: userSnapshot.id, ...userSnapshot.data() })
     )
-  } catch (err) {}
+  } catch (err) {
+    yield put(googleSignInFailure(err))
+  }
 }
 
 export function* onGoogleSignInStart() {
