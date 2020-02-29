@@ -3,8 +3,10 @@ import FormInput from '../FormInput/FormInput'
 import CustomButton from '../CustomButton/CustomButton'
 import { connect } from 'react-redux'
 
-import { auth, signInWithGoogle } from '../../firebase/firebase.utils'
-import { googleSignInStart } from '../../redux/user/user.actions'
+import {
+  googleSignInStart,
+  emailSignInStart
+} from '../../redux/user/user.actions'
 
 import './SignIn.styles.scss'
 
