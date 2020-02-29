@@ -78,4 +78,4 @@ const mapDispatchToProps = dispatch => ({
   googleSignInStart: () => dispatch(googleSignInStart())
 })
 
-export default SignIn
+export default connect(null, mapDispatchToProps)(SignIn)
