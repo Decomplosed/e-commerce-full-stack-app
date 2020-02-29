@@ -24,6 +24,8 @@ class SignIn extends React.Component {
     e.preventDefault()
     const { emailSignInStart } = this.props
     const { email, password } = this.state
+
+    emailSignInStart(email, password)
   }
 
   handleChange = e => {
