@@ -74,4 +74,8 @@ class SignIn extends React.Component {
   }
 }
 
+const mapDispatchToProps = dispatch => ({
+  googleSignInStart: () => dispatch(googleSignInStart())
+})
+
 export default SignIn
