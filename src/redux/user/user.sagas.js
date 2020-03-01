@@ -29,8 +29,8 @@ export function* signInWithGoogle() {
 
 export function* signInWithEmail({ payload: { email, password } }) {
   try {
-
-  } catch(err) {
+    const { user } = yield auth.signInWithEmailAndPassword(email, password)
+  } catch (err) {
     yield put(emailSignInFailure(err))
   }
 }
