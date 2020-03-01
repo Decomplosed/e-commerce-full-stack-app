@@ -18,6 +18,7 @@ class App extends React.Component {
 
   componentDidMount() {
     const { checkUserSession } = this.props
+    checkUserSession()
   }
 
   componentWillUnmount() {
