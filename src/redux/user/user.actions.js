@@ -10,11 +10,11 @@ export const emailSignInStart = emailAndPassword => ({
 })
 
 export const signInSuccess = user => ({
-  type: UserActionTypes.GOOGLE_SIGN_IN_SUCCESS,
+  type: UserActionTypes.SIGN_IN_SUCCESS,
   payload: user
 })
 
 export const signInFailure = err => ({
-  type: UserActionTypes.GOOGLE_SIGN_IN_FAILURE,
+  type: UserActionTypes.SIGN_IN_FAILURE,
   payload: err
 })
