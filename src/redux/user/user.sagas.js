@@ -7,7 +7,8 @@ import { signInSuccess, signInFailure } from './user.actions'
 import {
   auth,
   googleProvider,
-  createUserProfileDocument
+  createUserProfileDocument,
+  getCurrentUser
 } from '../../firebase/firebase.utils'
 
 export function* getSnapshotFromUserAuth(userAuth) {
