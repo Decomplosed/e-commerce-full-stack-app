@@ -27,6 +27,10 @@ export function* signInWithGoogle() {
   }
 }
 
+export function* signInWithEmail({ payload: { email, password } }) {
+  
+}
+
 export function* onGoogleSignInStart() {
   yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START, signInWithGoogle)
 }
