@@ -23,9 +23,7 @@ export function* getSnapshotFromUserAuth(userAuth) {
 export function* signInWithGoogle() {
   try {
     const { user } = yield auth.signInWithPopup(googleProvider)
-    const userRef = yield call(createUserProfileDocument, user)
-    const userSnapshot = yield userRef.get()
-    yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() }))
+    yield getSnapshotFromUserAuth(user)
   } catch (err) {
     yield put(signInFailure(err))
   }
