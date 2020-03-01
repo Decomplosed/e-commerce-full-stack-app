@@ -39,6 +39,16 @@ export function* signInWithEmail({ payload: { email, password } }) {
   }
 }
 
+export function* isUserAuthenticated() {
+  try {
+    const userAuth = yield getCurrentUser()
+    if (!userAuth) return
+    yield getSnapshotFromUserAuth(userAuth)
+  } catch (err) {
+    yield put(signInFailure(err))
+  }
+}
+
 export function* onGoogleSignInStart() {
   yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START, signInWithGoogle)
 }
