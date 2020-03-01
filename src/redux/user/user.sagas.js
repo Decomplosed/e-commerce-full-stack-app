@@ -31,7 +31,7 @@ export function* signInWithEmail({ payload: { email, password } }) {
   try {
 
   } catch(err) {
-
+    yield put(emailSignInFailure(err))
   }
 }
 
