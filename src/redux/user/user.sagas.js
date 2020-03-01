@@ -2,7 +2,11 @@ import { takeLatest, put, all, call } from 'redux-saga/effects'
 
 import UserActionTypes from './user.types'
 
-import { googleSignInSuccess, googleSignInFailure, emailSignInSuccess } from './user.actions'
+import {
+  googleSignInSuccess,
+  googleSignInFailure,
+  emailSignInSuccess
+} from './user.actions'
 
 import {
   auth,
@@ -25,6 +29,10 @@ export function* signInWithGoogle() {
 
 export function* onGoogleSignInStart() {
   yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START, signInWithGoogle)
+}
+
+export function* onEmailSignInStart() {
+  yield takeLatest(UserActionTypes.EMAIL_SIGN_IN_START)
 }
 
 export function* userSagas() {
