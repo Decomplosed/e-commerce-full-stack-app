@@ -28,7 +28,11 @@ export function* signInWithGoogle() {
 }
 
 export function* signInWithEmail({ payload: { email, password } }) {
-  
+  try {
+
+  } catch(err) {
+
+  }
 }
 
 export function* onGoogleSignInStart() {
