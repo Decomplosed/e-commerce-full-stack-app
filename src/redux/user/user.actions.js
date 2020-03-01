@@ -1,10 +1,10 @@
 import UserActionTypes from './user.types'
 
-export const SignInStart = () => ({
+export const signInStart = () => ({
   type: UserActionTypes.GOOGLE_SIGN_IN_START
 })
 
-export const SignInSuccess = user => ({
+export const signInSuccess = user => ({
   type: UserActionTypes.GOOGLE_SIGN_IN_SUCCESS,
   payload: user
 })
