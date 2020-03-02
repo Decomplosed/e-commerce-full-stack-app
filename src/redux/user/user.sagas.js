@@ -49,6 +49,15 @@ export function* isUserAuthenticated() {
   }
 }
 
+export function* signOut() {
+  try {
+    yield auth.signOut()
+    yield put(signOutSuccess())
+  } catch(err) {
+
+  }
+}
+
 export function* onGoogleSignInStart() {
   yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START, signInWithGoogle)
 }
