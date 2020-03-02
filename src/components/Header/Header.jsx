@@ -47,4 +47,4 @@ const mapDispatchToProps = dispatch => ({
   signOutStart: () => dispatch(signOutStart())
 })
 
-export default connect(mapStateToProps)(Header)
+export default connect(mapStateToProps, mapDispatchToProps)(Header)
