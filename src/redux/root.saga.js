@@ -5,5 +5,5 @@ import { userSagas } from './user/user.sagas'
 import { cartSagas } from './cart/cart.sagas'
 
 export default function* rootSaga() {
-  yield all([call(fetchCollectionsStart), call(userSagas)])
+  yield all([call(fetchCollectionsStart), call(userSagas), call(cartSagas)])
 }
