@@ -11,6 +11,6 @@ export function* onSignOutSuccess() {
   yield takeLatest(UserActionTypes.SIGN_OUT_SUCCESS)
 }
 
-export default function* cartSagas() {
+export function* cartSagas() {
   yield all([call(onSignOutSuccess)])
 }
