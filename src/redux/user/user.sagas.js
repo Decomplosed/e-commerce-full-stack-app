@@ -94,6 +94,10 @@ export function* onSignUpStart() {
   yield takeLatest(UserActionTypes.SIGN_UP_START, signUp)
 }
 
+export function* onSignUpSuccess() {
+  yield takeLatest(UserActionTypes.SIGN_UP_SUCCESS, signInAfterSignUp)
+}
+
 export function* userSagas() {
   yield all([
     call(onGoogleSignInStart),
