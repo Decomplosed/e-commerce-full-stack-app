@@ -63,7 +63,11 @@ export function* signOut() {
   }
 }
 
-export function* signUp({ payload: { email, password, displayName } }) {}
+export function* signUp({ payload: { email, password, displayName } }) {
+  try {
+    const { user } = yield auth.createUserWithEmailAndPassword(email, password)
+  } catch (err) {}
+}
 
 export function* onGoogleSignInStart() {
   yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START, signInWithGoogle)
