@@ -63,6 +63,8 @@ export function* signOut() {
   }
 }
 
+export function* signUp({ payload: { email, password, displayName } }) {}
+
 export function* onGoogleSignInStart() {
   yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START, signInWithGoogle)
 }
