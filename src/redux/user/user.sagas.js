@@ -91,7 +91,7 @@ export function* onSignOutStart() {
 }
 
 export function* onSignUpStart() {
-  takeLatest(UserActionTypes.SIGN_UP_START, signUp)
+  yield takeLatest(UserActionTypes.SIGN_UP_START, signUp)
 }
 
 export function* userSagas() {
