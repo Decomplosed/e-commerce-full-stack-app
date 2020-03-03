@@ -68,7 +68,9 @@ export function* signOut() {
 export function* signUp({ payload: { email, password, displayName } }) {
   try {
     const { user } = yield auth.createUserWithEmailAndPassword(email, password)
-  } catch (err) {}
+  } catch (err) {
+    put(signUpFailure(err))
+  }
 }
 
 export function* onGoogleSignInStart() {
