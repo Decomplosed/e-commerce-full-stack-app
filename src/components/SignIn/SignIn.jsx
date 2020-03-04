@@ -16,10 +16,10 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
     password: ''
   })
 
+  const { email, password } = userCredentials
+
   const handleSubmit = async e => {
     e.preventDefault()
-    const { email, password } = userCredentials
-
     emailSignInStart(email, password)
   }
 
@@ -37,7 +37,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
         <FormInput
           name='email'
           type='email'
-          value={this.state.email}
+          value={email}
           handleChange={handleChange}
           label='email'
           required
@@ -45,7 +45,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
         <FormInput
           name='password'
           type='password'
-          value={this.state.password}
+          value={password}
           handleChange={handleChange}
           label='password'
           required
