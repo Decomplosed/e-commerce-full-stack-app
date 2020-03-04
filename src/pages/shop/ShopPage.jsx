@@ -6,28 +6,22 @@ import { connect } from 'react-redux'
 
 import { fetchCollectionsStart } from '../../redux/shop/shop.actions'
 
-const ShopPage = ({match, fetchCollectionsStart}) => {
-  componentDidMount() {
-    const { fetchCollectionsStart } = this.props
-    fetchCollectionsStart()
-  }
+const ShopPage = ({ match, fetchCollectionsStart }) => {
 
-  render() {
-    const { match } = this.props
-    return (
-      <div className='shop-page'>
-        <Route
-          exact
-          path={`${match.path}`}
-          component={CollectionsOverviewContainer}
-        />
-        <Route
-          path={`${match.path}/:collectionId`}
-          component={CollectionPageContainer}
-        />
-      </div>
-    )
-  }
+
+  return (
+    <div className='shop-page'>
+      <Route
+        exact
+        path={`${match.path}`}
+        component={CollectionsOverviewContainer}
+      />
+      <Route
+        path={`${match.path}/:collectionId`}
+        component={CollectionPageContainer}
+      />
+    </div>
+  )
 }
 
 const mapDispatchToProps = dispatch => ({
