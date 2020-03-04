@@ -38,12 +38,12 @@ const SignUp = ({ signUpStart }) => {
     <div className='sign-up'>
       <h2 className='title'>I do not have an account</h2>
       <span>Sign Up with your email and password</span>
-      <form className='sign-up-form' onSubmit={this.handleSubmit}>
+      <form className='sign-up-form' onSubmit={handleSubmit}>
         <FormInput
           type='text'
           name='displayName'
           value={displayName}
-          onChange={this.handleChange}
+          onChange={handleChange}
           label='Display Name'
           required
         />
@@ -51,7 +51,7 @@ const SignUp = ({ signUpStart }) => {
           type='email'
           name='email'
           value={email}
-          onChange={this.handleChange}
+          onChange={handleChange}
           label='Email'
           required
         />
@@ -59,7 +59,7 @@ const SignUp = ({ signUpStart }) => {
           type='password'
           name='password'
           value={password}
-          onChange={this.handleChange}
+          onChange={handleChange}
           label='Password'
           required
         />
@@ -67,7 +67,7 @@ const SignUp = ({ signUpStart }) => {
           type='password'
           name='confirmPassword'
           value={confirmPassword}
-          onChange={this.handleChange}
+          onChange={handleChange}
           label='Confirm Password'
           required
         />
