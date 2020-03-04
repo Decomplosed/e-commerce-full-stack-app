@@ -10,17 +10,10 @@ import {
 
 import './SignIn.styles.scss'
 
-class SignIn extends React.Component {
-  constructor(props) {
-    super(props)
+const SignIn = () => {
+  const [userCredentials, setCredentials] = useState({email: '', password: ''})
 
-    this.state = {
-      email: '',
-      password: ''
-    }
-  }
-
-  handleSubmit = async e => {
+  const handleSubmit = async e => {
     e.preventDefault()
     const { emailSignInStart } = this.props
     const { email, password } = this.state
@@ -28,7 +21,7 @@ class SignIn extends React.Component {
     emailSignInStart(email, password)
   }
 
-  handleChange = e => {
+  const handleChange = e => {
     const { value, name } = e.target
 
     this.setState({ [name]: value })
