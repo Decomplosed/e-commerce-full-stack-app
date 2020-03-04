@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CollectionsOverviewContainer from '../../components/CollectionsOverview/CollectionsOverviewContainer'
 import CollectionPageContainer from '../collection/CollectionContainer'
 import { Route } from 'react-router-dom'
