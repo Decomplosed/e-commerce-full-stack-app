@@ -10,13 +10,12 @@ import {
 
 import './SignIn.styles.scss'
 
-const SignIn = () => {
+const SignIn = ({emailSignInStart}) => {
   const [userCredentials, setCredentials] = useState({email: '', password: ''})
 
   const handleSubmit = async e => {
     e.preventDefault()
-    const { emailSignInStart } = this.props
-    const { email, password } = this.state
+    const { email, password } = userCredentials
 
     emailSignInStart(email, password)
   }
@@ -24,7 +23,7 @@ const SignIn = () => {
   const handleChange = e => {
     const { value, name } = e.target
 
-    this.setState({ [name]: value })
+    setCredentials({...userCredentials, [name]: value })
   }
 
   render() {
