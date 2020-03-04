@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 import { fetchCollectionsStart } from '../../redux/shop/shop.actions'
 
-const ShopPage = () => {
+const ShopPage = ({match, fetchCollectionsStart}) => {
   componentDidMount() {
     const { fetchCollectionsStart } = this.props
     fetchCollectionsStart()
