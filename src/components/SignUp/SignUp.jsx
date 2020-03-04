@@ -31,7 +31,7 @@ const SignUp = ({signUpStart}) => {
   handleChange = e => {
     const { name, value } = e.target
 
-    this.setState({ [name]: value })
+    setUserCredentials({...userCredentials, [name]: value })
   }
 
   render() {
