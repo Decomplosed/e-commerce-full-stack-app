@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 import { fetchCollectionsStart } from '../../redux/shop/shop.actions'
 
-class ShopPage extends React.Component {
+const ShopPage = () => {
   componentDidMount() {
     const { fetchCollectionsStart } = this.props
     fetchCollectionsStart()
