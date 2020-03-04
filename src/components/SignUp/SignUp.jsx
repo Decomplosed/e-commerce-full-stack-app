@@ -15,6 +15,8 @@ const SignUp = ({signUpStart}) => {
   confirmPassword: ''
  })
 
+ const { displayName, email, password, confirmPassword } = userCredentials
+
   handleSubmit = async e => {
     e.preventDefault()
 
