@@ -7,17 +7,13 @@ import { signUpStart } from '../../redux/user/user.actions'
 
 import './SignUp.styles.scss'
 
-class SignUp extends React.Component {
-  constructor() {
-    super()
-
-    this.state = {
-      displayName: '',
-      email: '',
-      password: '',
-      confirmPassword: ''
-    }
-  }
+const SignUp = () => {
+ const [userCredentials, setUserCredentials] = useState({
+  displayName: '',
+  email: '',
+  password: '',
+  confirmPassword: ''
+ })
 
   handleSubmit = async e => {
     e.preventDefault()
