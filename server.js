@@ -5,6 +5,8 @@ const path = require('path')
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 
+const stripe = require('stripe')
+
 const app = express()
 const port = process.env.PORT || 5000
 
