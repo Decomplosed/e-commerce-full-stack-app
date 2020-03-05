@@ -28,8 +28,4 @@ const CollectionPage = ({ match }) => {
   )
 }
 
-const mapStateToProps = (state, ownProps) => ({
-  collection: selectCollection(ownProps.match.params.collectionId)(state)
-})
-
 export default CollectionPage
