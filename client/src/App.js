@@ -6,6 +6,7 @@ import SignInAndSignUp from './pages/sign-in-and-sing-up/SignInAndSignUp'
 import Header from './components/Header/Header'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
+import CurrentUserContext from './contexts/current-user/current-user.context'
 
 import { createStructuredSelector } from 'reselect'
 import { selectCurrentUser } from './redux/user/user.selectors'
