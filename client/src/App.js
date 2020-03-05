@@ -20,9 +20,7 @@ const App = ({ checkUserSession, currentUser }) => {
 
   return (
     <div>
-      <CurrentUserContext.Provider>
-        <Header />
-      </CurrentUserContext.Provider>
+      <Header />
       <Switch>
         <Route exact path='/' component={Homepage} />
         <Route path='/shop' component={ShopPage} />
