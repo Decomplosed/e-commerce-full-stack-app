@@ -3,6 +3,7 @@ import CollectionItem from '../../components/CollectionItem/CollectionItem'
 
 import { connect } from 'react-redux'
 import { selectCollection } from '../../redux/shop/shop.selectors'
+import CollectionsContext from '../../contexts/collections/collections.context'
 
 import './Collection.styles.scss'
 
