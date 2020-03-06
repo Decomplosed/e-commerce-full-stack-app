@@ -13,27 +13,27 @@ import { checkUserSession } from './redux/user/user.actions'
 
 import './App.css'
 
-const App = ({ checkUserSession, currentUser }) => {
-  useEffect(() => {
-    checkUserSession()
-  }, [checkUserSession])
+class App extends React.Component {
+  unsubscribeFromAuth = null
 
-  return (
-    <div>
-      <Header />
-      <Switch>
-        <Route exact path='/' component={Homepage} />
-        <Route path='/shop' component={ShopPage} />
-        <Route exact path='/checkout' component={CheckoutPage} />
-        <Route
-          path='/signin'
-          render={() =>
-            currentUser ? <Redirect to='/' /> : <SignInAndSignUp />
-          }
-        />
-      </Switch>
-    </div>
-  )
+  render() {
+    return (
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path='/' component={Homepage} />
+          <Route path='/shop' component={ShopPage} />
+          <Route exact path='/checkout' component={CheckoutPage} />
+          <Route
+            path='/signin'
+            render={() =>
+              currentUser ? <Redirect to='/' /> : <SignInAndSignUp />
+            }
+          />
+        </Switch>
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = createStructuredSelector({
