@@ -22,11 +22,12 @@ export const CollectionItemContainer = styled.div`
     width: 40vw;
 
     &:hover {
-    .image {
-      opacity: unset;
-    }
-    button {
-      opacity: unset;
+      .image {
+        opacity: unset;
+      }
+      button {
+        opacity: unset;
+      }
     }
   }
 `
