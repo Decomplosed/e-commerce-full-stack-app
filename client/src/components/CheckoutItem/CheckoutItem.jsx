@@ -7,7 +7,13 @@ import {
   removeItem
 } from '../../redux/cart/cart.actions'
 
-import './CheckoutItem.styles.scss'
+import {
+  CheckoutItemContainer,
+  ImageContainer,
+  TextContainer,
+  QuantityContainer,
+  RemoveButtonContainer
+} from './CheckoutItem.styles'
 
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
   const { name, imageUrl, price, quantity } = cartItem
