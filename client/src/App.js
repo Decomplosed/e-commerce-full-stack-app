@@ -12,6 +12,8 @@ import { checkUserSession } from './redux/user/user.actions'
 
 import { GlobalStyle } from './global.styles'
 
+const Homepage = lazy(() => import('./pages/homepage/Homepage'))
+
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
     checkUserSession()
