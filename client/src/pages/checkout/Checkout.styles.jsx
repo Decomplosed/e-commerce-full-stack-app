@@ -20,3 +20,11 @@ export const CheckoutHeaderContainer = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid darkgrey;
 `
+
+export const HeaderBlockContainer = styled.div`
+  text-transform: capitalize;
+  width: 23%;
+  &:last-child {
+    width: 8%;
+  }
+`
