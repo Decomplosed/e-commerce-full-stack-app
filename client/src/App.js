@@ -1,6 +1,5 @@
 import React, { useEffect, lazy, Suspense } from 'react'
-import ShopPage from './pages/shop/ShopPage'
-import CheckoutPage from './pages/checkout/Checkout'
+
 import SignInAndSignUp from './pages/sign-in-and-sing-up/SignInAndSignUp'
 import Header from './components/Header/Header'
 import { Switch, Route, Redirect } from 'react-router-dom'
