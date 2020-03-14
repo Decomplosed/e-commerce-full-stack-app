@@ -12,3 +12,11 @@ export const CheckoutPageContainer = styled.div`
     margin-top: 50px;
   }
 `
+
+export const CheckoutHeaderContainer = styled.div`
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid darkgrey;
+`
