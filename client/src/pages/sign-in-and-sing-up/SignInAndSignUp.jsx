@@ -5,10 +5,10 @@ import SignUp from '../../components/SignUp/SignUp'
 import { SignInAndSignUpContainer } from './SignInAndSignUp.styles'
 
 const SignInAndSignUp = () => (
-  <div className='sign-in-and-sign-up'>
+  <SignInAndSignUpContainer>
     <SignIn />
     <SignUp />
-  </div>
+  </SignInAndSignUpContainer>
 )
 
 export default SignInAndSignUp
