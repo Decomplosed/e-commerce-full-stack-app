@@ -1,4 +1,4 @@
-import React, { useEffect, lazy } from 'react'
+import React, { useEffect, lazy, Suspense } from 'react'
 import ShopPage from './pages/shop/ShopPage'
 import CheckoutPage from './pages/checkout/Checkout'
 import SignInAndSignUp from './pages/sign-in-and-sing-up/SignInAndSignUp'
