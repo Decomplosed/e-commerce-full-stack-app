@@ -4,7 +4,11 @@ import CollectionItem from '../../components/CollectionItem/CollectionItem'
 import { selectCollection } from '../../redux/shop/shop.selectors'
 import { connect } from 'react-redux'
 
-import './Collection.styles.scss'
+import {
+  CollectionPageContainer,
+  CollectionTitle,
+  CollectionItemsContainer
+} from './Collection.styles'
 
 const CollectionPage = ({ collection }) => {
   const { title, items } = collection
