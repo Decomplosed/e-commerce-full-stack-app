@@ -13,6 +13,7 @@ import { GlobalStyle } from './global.styles'
 
 const Homepage = lazy(() => import('./pages/homepage/Homepage'))
 const ShopPage = lazy(() => import('./pages/shop/ShopPage'))
+const CheckoutPage = lazy(() => import('./pages/checkout/Checkout'))
 
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
