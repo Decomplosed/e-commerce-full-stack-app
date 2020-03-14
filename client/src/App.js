@@ -1,6 +1,4 @@
 import React, { useEffect, lazy, Suspense } from 'react'
-
-import SignInAndSignUp from './pages/sign-in-and-sing-up/SignInAndSignUp'
 import Header from './components/Header/Header'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
@@ -14,7 +12,9 @@ import { GlobalStyle } from './global.styles'
 const Homepage = lazy(() => import('./pages/homepage/Homepage'))
 const ShopPage = lazy(() => import('./pages/shop/ShopPage'))
 const CheckoutPage = lazy(() => import('./pages/checkout/Checkout'))
-const SignInAndSignUp = lazy(() => import('./pages/sign-in-and-sing-up/SignInAndSignUp'))
+const SignInAndSignUp = lazy(() =>
+  import('./pages/sign-in-and-sing-up/SignInAndSignUp')
+)
 
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
