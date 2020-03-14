@@ -28,3 +28,9 @@ export const HeaderBlockContainer = styled.div`
     width: 8%;
   }
 `
+
+export const TotalContainer = styled.div`
+  margin-top: 30px;
+  margin-left: auto;
+  font-size: 36px;
+`
