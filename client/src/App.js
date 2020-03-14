@@ -24,7 +24,9 @@ const App = ({ checkUserSession, currentUser }) => {
       <GlobalStyle />
       <Header />
       <Switch>
-        <Route exact path='/' component={Homepage} />
+        <Suspense fallback={<div>...Loading</div>}>
+          <Route exact path='/' component={Homepage} />
+        </Suspense>
         <Route path='/shop' component={ShopPage} />
         <Route exact path='/checkout' component={CheckoutPage} />
         <Route
