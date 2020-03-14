@@ -28,15 +28,15 @@ const App = ({ checkUserSession, currentUser }) => {
       <Switch>
         <Suspense fallback={<div>...Loading</div>}>
           <Route exact path='/' component={Homepage} />
+          <Route path='/shop' component={ShopPage} />
+          <Route exact path='/checkout' component={CheckoutPage} />
+          <Route
+            path='/signin'
+            render={() =>
+              currentUser ? <Redirect to='/' /> : <SignInAndSignUp />
+            }
+          />
         </Suspense>
-        <Route path='/shop' component={ShopPage} />
-        <Route exact path='/checkout' component={CheckoutPage} />
-        <Route
-          path='/signin'
-          render={() =>
-            currentUser ? <Redirect to='/' /> : <SignInAndSignUp />
-          }
-        />
       </Switch>
     </div>
   )
