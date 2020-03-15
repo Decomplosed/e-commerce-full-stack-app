@@ -1,6 +1,7 @@
 import React, { useEffect, lazy, Suspense } from 'react'
 import Header from './components/Header/Header'
 import Spinner from './components/Spinner/Spinner'
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary'
 
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
