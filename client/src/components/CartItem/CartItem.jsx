@@ -7,15 +7,15 @@ import {
 } from './CartItem.styles'
 
 const CartItem = ({ item: { imageUrl, price, name, quantity } }) => (
-  <div className='cart-item'>
-    <img src={imageUrl} alt={`${name} cart item`} />
-    <div className='item-details'>
+  <CartItemContainer>
+    <CartItemImage src={imageUrl} alt={`${name} item`} />
+    <ItemDetailsContainer>
       <span className='name'>{name}</span>
       <span className='price'>
         {quantity} x ${price}
       </span>
-    </div>
-  </div>
+    </ItemDetailsContainer>
+  </CartItemContainer>
 )
 
 export default CartItem
