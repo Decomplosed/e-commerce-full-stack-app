@@ -1,5 +1,11 @@
 import React from 'react'
 
+import {
+  ErrorImageOverlay,
+  ErrorImageContainer,
+  ErrorImageText
+} from './ErrorBoundary.styles'
+
 class ErrorBoundary extends React.Component {
   constructor() {
     super()
