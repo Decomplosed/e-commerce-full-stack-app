@@ -51,5 +51,5 @@ export function* onCartChange() {
 }
 
 export function* cartSagas() {
-  yield all([call(onSignOutSuccess)])
+  yield all([call(onSignOutSuccess), call(onCartChange)])
 }
