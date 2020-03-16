@@ -1,5 +1,4 @@
 import { all, call, takeLatest, put, select } from 'redux-saga/effects'
-
 import { getUserCartRef } from '../../firebase/firebase.utils'
 
 import UserActionTypes from '../user/user.types'
@@ -28,6 +27,7 @@ export function* updateCartInFirebase() {
 
 export function* checkCartFromFirebase({ payload: user }) {
   const cartRef = yield getUserCartRef(user.id)
+  const cartSnapshot = yield cartRef.get()
 }
 
 export function* onSignOutSuccess() {
