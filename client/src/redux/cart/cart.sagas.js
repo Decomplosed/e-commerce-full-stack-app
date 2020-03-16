@@ -5,6 +5,7 @@ import { getUserCartRef } from '../../firebase/firebase.utils'
 import UserActionTypes from '../user/user.types'
 import { clearCart, setCartFromFirebase } from './cart.actions'
 import { selectCurrentUser } from '../user/user.selectors'
+import { selectCartItems } from './cart.selectors'
 
 export function* clearCartOnSignOut() {
   yield put(clearCart())
