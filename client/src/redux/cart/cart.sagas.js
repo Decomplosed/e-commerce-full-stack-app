@@ -1,5 +1,7 @@
 import { all, call, takeLatest, put, select } from 'redux-saga/effects'
 
+import { getUserCartRef } from '../../firebase/firebase.utils'
+
 import UserActionTypes from '../user/user.types'
 import { clearCart } from './cart.actions'
 
