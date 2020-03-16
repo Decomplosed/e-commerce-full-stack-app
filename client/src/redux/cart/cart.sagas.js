@@ -39,7 +39,16 @@ export function* onUserSignIn() {
   yield takeLatest(UserActionTypes.SIGN_IN_SUCCESS, checkCartFromFirebase)
 }
 
-export function* onCartChange() {}
+export function* onCartChange() {
+  yield takeLatest(
+    [
+      CartActionTypes.ADD_ITEM,
+      CartActionTypes.REMOVE_ITEM,
+      CartActionTypes.CLEAR_ITEM_FROM_CART
+    ],
+    updateCartInFirebase
+  )
+}
 
 export function* cartSagas() {
   yield all([call(onSignOutSuccess)])
