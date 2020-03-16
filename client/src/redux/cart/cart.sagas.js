@@ -12,6 +12,8 @@ export function* clearCartOnSignOut() {
   yield put(clearCart())
 }
 
+export function* updateCartInFirebase() {}
+
 export function* onSignOutSuccess() {
   yield takeLatest(UserActionTypes.SIGN_OUT_SUCCESS, clearCartOnSignOut)
 }
