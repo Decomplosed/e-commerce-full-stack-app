@@ -40,8 +40,8 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef
 }
 
-export const getUserCartRef = async userID => {
-  
+export const getUserCartRef = async userId => {
+  const cartsRef = firestore.collection('users').where('userId', '==', userId)
 }
 
 export const addCollectionAndDocument = async (collectionKey, objectsToAdd) => {
