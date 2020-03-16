@@ -26,7 +26,9 @@ export function* updateCartInFirebase() {
   }
 }
 
-export function* checkCartFromFirebase({ payload: user }) {}
+export function* checkCartFromFirebase({ payload: user }) {
+  const cartRef = yield getUserCartRef(user.id)
+}
 
 export function* onSignOutSuccess() {
   yield takeLatest(UserActionTypes.SIGN_OUT_SUCCESS, clearCartOnSignOut)
